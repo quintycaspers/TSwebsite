@@ -1,25 +1,19 @@
 /**************/
 /* CSS REMEDY  */
 /**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
 }
-
-
-
-
 
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	--color-text:#333;
-	--color-background:#f8f8f8;
+	--color-text: #333;
+	--color-background: #f8f8f8;
 }
-
-
-
-
 
 /****************/
 /* algemene styling */
@@ -28,109 +22,177 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-  }
+}
 
-  body {
+body {
 	font-family: Arial, sans-serif;
 	line-height: 1.6;
-  }
+}
 
- /* header (nog toevoegen) {
+/* header (nog toevoegen) {
 	background-color: #000;
 	color: #fff;
 	padding: 20px;
 	text-align: center;
   } */
 
-  main {
+main {
 	padding: 20px;
-  }
+	padding-top: 12vh;
+}
 
-  section {
+section {
 	margin-bottom: 40px;
-  }
+}
 
-  footer {
+footer {
 	background-color: #333;
 	color: #fff;
 	padding: 20px;
 	text-align: center;
-  }
+}
 
+/****************/
+/* text styling */
+/****************/
+h1 {
+	text-align: center;
+}
 
-
-
+/****************/
+/* header styling */
+/****************/
+header {
+	width: 100vw;
+	height: 8vh;
+	position: fixed;
+	background-color: white;
+}
 
 /****************/
 /* nav styling */
 /****************/
-  nav {
-	background-color: #fff;
-	/* color: #333; */
-	padding: 10px;
-	position: fixed;
-	left: 4em;
-	right: 0em;
+nav {
+	/* background-color: blue; */
 	text-align: right;
-	position: sticky;				/*toegevoegd (?) */
-  }
+	position: fixed;
+	top: 0em;
+	right: 0em;
+}
 
-  nav ul {
+nav ul {
 	list-style-type: none;
 	display: none;
-	color: #333; 
-  }
+	color: #333;
+}
 
-  nav ul.menu-open {
+nav ul.menu-open {
 	display: block;
-  }
+	width: 100vw;
+	background-color: white;
+}
 
-  nav li {
+nav li {
 	margin-right: 20px;
 	padding: 1em;
-  }
+	text-align: right;
+}
 
-  nav a {
+nav a {
 	text-decoration: none;
 	color: #000;
 	font-weight: bold;
 	font-size: 16px;
-  }
+}
 
 nav button {
 	font-size: 2em;
+	margin-right: 0.25em;
+	margin-top: 0.15em;
 }
-
-
-
-
 
 /****************/
 /* img */
 /****************/
 img {
 	width: 80%;
+	/* display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center; */
 }
 
-img:first-of-type {
+/* img:first-of-type {
 	width: 100%;
 	animation: imgAnimation 2s ease-in-out forwards;
+} */
+
+/* section:first-of-type {
+	display: grid;
+	grid-column-start: 1fr;
+	grid-column-end: 1fr 1fr;
+}  werkt nog niet?*/
+
+/* section moet naar standaard ipv class */
+
+header > img {
+	width: 40%;
+	margin-left: 0.25em;
+	margin-top: 0.25em;
 }
 
+section.character_img {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	width: 80%;
+	column-gap: 1em;
+	row-gap: 1em;
+	/* overflow: hidden; */
+}
 
+section.character_img img {
+	height: 6em;
+	width: auto;
+	justify-self: center;
+	/* overflow: hidden; */
+	object-fit: cover;
+	aspect-ratio: 1;
+}
+
+section.films {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	width: 80%;
+	column-gap: 1em;
+	row-gap: 1em;
+}
+
+section.films img {
+	height: 14em;
+	width: auto;
+	justify-self: center;
+}
+
+/****************/
+/* list */
+/****************/
+li {
+	list-style-type: none;
+	text-align: center;
+}
 
 /****************/
 /* keyframes */
 /****************/
 @keyframes imgAnimation {
 	0% {
-	  transform: scale(1); /* Initial scale */
+		transform: scale(1); /* Initial scale */
 	}
 	50% {
-	  transform: scale(1.3); /* Scale up */
+		transform: scale(1.3); /* Scale up */
 	}
 	100% {
-	  transform: scale(1); /* Scale down to original size */
+		transform: scale(1); /* Scale down to original size */
 	}
 }
 
