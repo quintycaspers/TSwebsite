@@ -14,6 +14,16 @@
 	--color-text: #333;
 	--color-background: #f8f8f8;
 }
+/* Bron: https://developer.mozilla.org/en-US/docs/Web/CSS/--* */
+
+/*********************/
+/* FONTS */
+/*********************/
+@font-face {
+	font-family: Jost;
+	src: url(../fonts/Jost-VariableFont_wght.ttf);
+	/* Bron: https://fonts.google.com/specimen/Jost */
+}
 
 /****************/
 /* algemene styling */
@@ -25,24 +35,21 @@
 }
 
 body {
-	font-family: Arial, sans-serif;
+	font-family: Jost, Arial, sans-serif;
+	font-weight: 300;
 	line-height: 1.6;
 }
 
-/* header (nog toevoegen) {
-	background-color: #000;
-	color: #fff;
-	padding: 20px;
-	text-align: center;
-  } */
-
 main {
-	padding: 20px;
-	padding-top: 12vh;
+	/* padding: 20px; */
+	/* background-color: white; */
+	position: relative;
+	z-index: 2;
 }
 
 section {
-	margin-bottom: 40px;
+	background-color: var(--color-background);
+	padding: 5%;
 }
 
 footer {
@@ -57,6 +64,11 @@ footer {
 /****************/
 h1 {
 	text-align: center;
+	font-size: 2.5em;
+}
+
+p {
+	margin-bottom: 20%;
 }
 
 /****************/
@@ -64,38 +76,66 @@ h1 {
 /****************/
 header {
 	width: 100vw;
-	height: 8vh;
-	position: fixed;
+	height: 40vh;
 	background-color: white;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 }
 
+header > img:first-of-type {
+	position: fixed;
+	width: 30%;
+	z-index: 6;
+	margin: 3% 0 0 3%;
+}
+
+header > img:last-of-type {
+	grid-column: span 2;
+	width: 100%;
+	position: fixed;
+	top: 5%;
+}
+header > h1 {
+	grid-column: span 2;
+	width: 100%;
+	margin-top: 30%;
+	z-index: 1;
+	color: white;
+}
 /****************/
 /* nav styling */
 /****************/
 nav {
-	/* background-color: blue; */
-	text-align: right;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	position: fixed;
-	top: 0em;
-	right: 0em;
+	width: 100%;
+	height: 8%;
+	padding: auto;
+	z-index: 5;
 }
 
 nav ul {
-	list-style-type: none;
-	display: none;
+	list-style-type: none; /* Bron: https://www.w3schools.com/howto/howto_css_list_without_bullets.asp */
+	transform: translateX(-100%);
 	color: #333;
+	width: 80%;
+	background-color: white;
+
+	transition: 0.5s ease-in-out;
 }
 
 nav ul.menu-open {
-	display: block;
-	width: 100vw;
-	background-color: white;
+	transform: translateX(0);
 }
 
 nav li {
-	margin-right: 20px;
+	text-align: left;
 	padding: 1em;
-	text-align: right;
+	margin-left: 5%;
+	/* background-color: white; */
 }
 
 nav a {
@@ -105,10 +145,14 @@ nav a {
 	font-size: 16px;
 }
 
-nav button {
+nav > button {
 	font-size: 2em;
-	margin-right: 0.25em;
-	margin-top: 0.15em;
+	height: 70%;
+	margin: auto; /* Bron: https://www.sitepoint.com/css-grid-center-element/#:~:text=To%20center%20an%20element%20using,the%20margin%20property%20to%20auto. */
+	margin-right: 3%;
+	margin-top: 2%;
+	border: none;
+	background-color: transparent;
 }
 
 /****************/
@@ -117,29 +161,8 @@ nav button {
 img {
 	width: 80%;
 	/* display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center; */
 }
 
-/* img:first-of-type {
-	width: 100%;
-	animation: imgAnimation 2s ease-in-out forwards;
-} */
-
-/* section:first-of-type {
-	display: grid;
-	grid-column-start: 1fr;
-	grid-column-end: 1fr 1fr;
-}  werkt nog niet?*/
-
-/* section moet naar standaard ipv class */
-
-header > img {
-	width: 40%;
-	margin-left: 0.25em;
-	margin-top: 0.25em;
-}
 
 section.character_img {
 	display: grid;
@@ -162,17 +185,24 @@ section.character_img img {
 section.films {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	width: 80%;
+	width: 100%;
 	column-gap: 1em;
 	row-gap: 1em;
 }
 
 section.films img {
-	height: 14em;
+	height: 12em;
 	width: auto;
 	justify-self: center;
 }
 
+figure {
+	margin: auto;
+}
+
+figcaption {
+	text-align: center;
+}
 /****************/
 /* list */
 /****************/
