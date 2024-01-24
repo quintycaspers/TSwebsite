@@ -61,7 +61,7 @@ function christmasMode() {
 	root.removeAttribute("id");
 	root.id = "christmas";
 	pixarImg.src = "images/pixar_logo_white.png";
-	parallaxImg.src = "images/christmas.jpeg";
+	parallaxImg.src = "images/christmas.jpeg"; //Bron: https://www.deviantart.com/lightningmcqueen2017/art/Disney-Cars-Lightning-McQueen-and-Mater-Christmas-864287699
 	overlayImg.style.display = "none";
 }
 
@@ -69,3 +69,38 @@ lightmodeButton.addEventListener("click", lightMode);
 darkmodeButton.addEventListener("click", darkMode);
 classicmodeButton.addEventListener("click", classicMode);
 christmasmodeButton.addEventListener("click", christmasMode);
+
+/****************/
+//audio
+//Bron: https://stackoverflow.com/questions/9419263/how-to-play-audio
+/****************/
+const kachowButton = document.getElementById("kachow-audio");
+const materButton = document.getElementById("mater-audio");
+const sallyButton = document.getElementById("sally-audio");
+const docButton = document.getElementById("doc-audio");
+
+const kachowAudio = new Audio("audio/kachow.mp3"); // Bron: https://www.youtube.com/watch?v=cPwLD8qsunQ
+const materAudio = new Audio("audio/mater.mp3"); // Bron: https://www.youtube.com/watch?v=9ucVi5ffP8A
+const sallyAudio = new Audio("audio/sally.mp3"); // Bron: https://www.youtube.com/watch?v=ZV9Z_AcsXlU&list=PLjnjB1Z6t-kXz0NNCmqdXGyeU4B_nZHNg&index=1
+const docAudio = new Audio("audio/hudson.mp3"); // Bron: https://www.youtube.com/watch?v=klesyiesuUU
+
+function playKachowAudio() {
+	kachowAudio.play();
+}
+
+function playMaterAudio() {
+	materAudio.play();
+}
+
+function playSallyAudio() {
+	sallyAudio.play();
+}
+
+function playDocAudio() {
+	docAudio.play();
+}
+
+kachowButton.addEventListener("click", playKachowAudio);
+materButton.addEventListener("click", playMaterAudio);
+sallyButton.addEventListener("click", playSallyAudio);
+docButton.addEventListener("click", playDocAudio);
