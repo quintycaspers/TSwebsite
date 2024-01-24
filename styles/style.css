@@ -348,3 +348,53 @@ li {
 		--color-button-text: #fff;
 	}
 }
+
+/****************/
+/* responsiveness */
+/* Bron: https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
+/****************/
+@media only screen and (min-width: 600px) {
+	header > img:first-of-type {
+		width: 15%;
+		margin: 2% 0 0 2%;
+	}
+
+	nav {
+		height: 16%;
+	}
+
+	nav > button {
+		margin-right: 2%;
+		margin-top: 1%;
+	}
+
+	section button {
+		padding: 1em;
+		margin: 0.75em;
+		width: 15%;
+	}
+
+	main {
+		margin-top: 15%;
+	}
+
+	header > h1 {
+		margin-top: 20%;
+	}
+
+	section.films {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+  }
+
+  @media only screen and (min-width: 1000px) { 
+	section {
+		padding-left: 15%;
+		padding-right: 15%;
+	}
+
+	section.films {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+
+  }
