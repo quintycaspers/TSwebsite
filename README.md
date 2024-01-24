@@ -2,10 +2,10 @@
  Pixar and Cars inspired website
 
 ## Inleiding
-Voor deze opdracht ben ik begonnen met het maken van een website gebaseerd op de officele Taylor Swift website (daarom de naam TS website). Daarna heb ik besloten om toch een ander onderwerp te kiezen, omdat alle webpagina's erg vergelijkbaar waren. Daarom ben ik aan de slag gegaan met de Pix website. Ik ben vooral gaan focussen op de Pixar pagina: featured films en de Cars (1) pagina. 
+Voor deze opdracht ben ik begonnen met het maken van een website gebaseerd op de officele Taylor Swift website (daarom de naam TS website). Daarna heb ik besloten om toch een ander onderwerp te kiezen, omdat alle webpagina's erg vergelijkbaar waren. Daarom ben ik aan de slag gegaan met de Pixar website. Ik ben vooral gaan focussen op de Pixar pagina: featured films en de Cars (1) pagina. Ik ben te werk gegaan aan een "mobile-first" design. 
 
 ## Test 1: Pixar website, accessibility
-Tijdens het testen voor de eerste keer ben ik aan de slag gegaan met de screenreader. De originele Pixar website werkt niet enorm goed qua accessibility. Wanneer ik de screenreader aanzet is deze continue elementen aan het oplezen die niet in beeld zijn. Je kan daaro mniet zien waar op gefucust wordt. Ook zegt de screenreader bijna alleen maar "link, link, link". Het is enrom gaotisch om de screenreader te gebruiken.
+Tijdens het testen voor de eerste keer ben ik aan de slag gegaan met de screenreader. De originele Pixar website werkt niet enorm goed qua accessibility. Wanneer ik de screenreader aanzet is deze continue elementen aan het oplezen die niet in beeld zijn. Je kan daarom niet zien waar op gefocust wordt. Ook zegt de screenreader bijna alleen maar "link, link, link". Het is enorm chaotisch om de screenreader te gebruiken.
 Het gebruiken van TAB werkt ook niet enorm goed. Alle elementen (ook de enorme hoeveelheid aan foto's) worden als aparte elementen gezien waardoor het mega lang duurt voordat je door de gehele pagina heen bent. 
 De originele Pixar website is dus niet enorm goed qua accessibility features. Ik ga bij mijn versie eraan werken om dit te verbeteren.
 
@@ -22,7 +22,7 @@ De 5 onderwerpen die ik heb toegevoegd zijn:
 Ik heb ervoor gekozen om hieraan te werken i.p.v. responsiveness, omdat dit mij een stuk makkelijker leek. 
 
 ### Begin
-Als eerst ben ik aan de slag gegaan met alle elementen erin zetten. Zo heb ik alle img en tekst in de HTML gezet. Nadat ik wist wat er zo ongeveer allemaal op een pagina moest ben ik aan de slag gegaan met de CSS en JS. 
+Als eerst ben ik aan de slag gegaan met alle elementen erin zetten. Zo heb ik alle images en tekst in de HTML gezet. Nadat ik wist wat er zo ongeveer allemaal op een pagina moest ben ik aan de slag gegaan met de CSS en JS. 
 
 ### Styling
 Het maken van een hamburger menu is een van de eerste dingen waar ik op gefocust heb. Zo kon ik ook makkelijk tussen de 2 pagina's switchen. Hiervoor heb ik een JS bestand aangemaakt. 
