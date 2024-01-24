@@ -331,6 +331,10 @@ li {
 		opacity: 0;
 		transform: translateY(0);
 	}
+
+	nav ul {
+		transition: 0s;
+	}
   }
 
   /* Bron: https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-contrast */
